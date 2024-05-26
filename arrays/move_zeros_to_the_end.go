@@ -14,17 +14,3 @@ func moveZeros(arr []int) []int {
 
 	return arr
 }
-
-func moveZeros2(arr []int) []int {
-	arrLen := len(arr)
-	for i := 0; i < arrLen; i++ {
-		if arr[i] == 0 {
-			arr = append(arr[:i], arr[i+1:]...)
-			arr = append(arr, 0)
-			i -= 1
-			arrLen -= 1
-		}
-	}
-
-	return arr
-}
